@@ -1,0 +1,409 @@
+
+
+		<div id="main" class="container">
+
+			<div class="section section-no-margin-bottom row entries bg-primary">
+
+				<article class="entry style-grid style-hero hero-nav type-post col-xs-6 col-sm-6">
+					
+					<a routerLink="/{{category}}/{{singdetails.previous[0].seo_url}}">
+
+						<header class="entry-header">
+							<p class="small">Previous Story</p>
+							<h3 class="entry-title">{{previous}}</h3>
+						</header>
+
+						<figure class="entry-thumbnail">
+							
+							<div class="overlay overlay-primary"></div>
+							<!--a routerLink="/{{category}}/{{singdetails.previous[0].seo_url}}" class="overlay overlay-primary">-->
+								
+							<!-- to disable lazy loading, remove data-src and data-src-retina -->
+							<img src={{img_path}}{{singdetails.previous[0].blog_images}} width="480" height="280" alt="">
+						
+							<!--fallback for no javascript browsers-->
+							<noscript>
+								<img src="http://placehold.it/480x280" alt="">
+							</noscript>
+						
+						</figure>
+					</a>
+
+				</article>
+
+				<article class="entry style-grid style-hero hero-nav type-post col-xs-6 col-sm-6">
+					
+					<a (click)="detailover()" routerLink="/{{category}}/{{singdetails.next[0].seo_url}}" >
+
+						<header class="entry-header">
+							<p class="small">Next Story</p>
+							<h3 class="entry-title">{{singdetails.next[0].seo_title}}</h3>
+						</header>
+
+						<figure class="entry-thumbnail">
+
+							<div class="overlay overlay-primary"></div>
+
+							<!-- to disable lazy loading, remove data-src and data-src-retina -->
+							<img src={{img_path}}{{singdetails.next[0].blog_images}}   width="480" height="280" alt="">
+
+							<!--fallback for no javascript browsers-->
+							<noscript>
+								<img src="http://placehold.it/480x280"  alt="">
+							</noscript>
+
+						</figure>
+
+					</a> 
+
+				</article>
+
+			</div>
+
+			<div id="content" class="content section row">
+
+				<div class="col-md-8 bg-base col-lg-8 col-xl-9">
+
+					<div class="ribbon ribbon-highlight">
+						<ol class="breadcrumb ribbon-inner">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Social Media</a></li>
+							<li class="active" title="Postman will send notifications to your flashy smartphone about popular people and their latest shouts">Postman will send notifications ...</li>
+						</ol>
+					</div>
+					
+					<header class="page-header">
+						
+						<div class="page-meta pull-right hidden-xs">
+							<a href="#comments">
+								<span class="comments-count-balloon bg-primary">123<em>Comments</em></span>
+							</a>
+						</div>
+
+						<h2 class="page-title">
+							{{singdetails.current[0].seo_url}}
+						</h2>
+
+					</header>
+
+					<article class="entry style-single type-post">
+						
+						<figure class="entry-thumbnail">
+
+							<!-- to disable lazy loading, remove data-src and data-src-retina -->
+							<img src={{img_path}}{{singdetails.current[0].blog_images}} width="680" height="452" alt="">
+
+							<!--fallback for no javascript browsers-->
+							<noscript>
+								<img src={{img_path}}{{singdetails.current[0].blog_images}} alt="">
+							</noscript>
+
+						</figure>
+
+						<div class="entry-meta indented">
+							<!--<span class="author">by <a href="blog.html">John Doe</a></span>
+							<span class="entry-date"><a href="blog.html">on <time datetime="2013-07-04T23:26:34+00:00">September 20 2013</time></a></span>
+							<span class="category">In <a href="blog.html">Social Media</a></span>-->
+						</div>
+
+						<div class="entry-content indented">
+
+							<p class="lead" bind-textContent="singdetails.current[0].seo_url">
+									
+								
+							</p>
+
+							<!-- 
+							sample for adding full image
+							<figure class="image image-full">
+
+								<img src="../img/placeholder.gif" data-src="http://placehold.it/680x452" data-src-retina="http://placehold.it/1024x680" width="680" height="452" alt="">
+
+								<noscript>
+									<img src="http://placehold.it/680x452" alt="">
+								</noscript>
+
+							</figure> -->
+
+							<div class="gallery bg-page flushed-left">
+
+								<!-- <h4 class="gallery-title">Gallery</h4> -->
+
+								<div class="row">
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 1" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 2" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 3" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 4" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 5" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 6" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 7" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 8" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 9" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 10" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 10" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+									<div class="col-xs-3 col-sm-2">
+										<a href="http://placehold.it/460x460" title="Image 2" class="thumbnail" data-rel="prettyPhoto[gallery]">
+
+											<!-- to disable lazy loading, remove data-src and data-src-retina -->
+											<img src="../img/placeholder.gif" data-src="http://placehold.it/80x80" data-src-retina="http://placehold.it/160x160" width="80" height="80" alt="">
+
+											<!--fallback for no javascript browsers-->
+											<noscript>
+												<img src="http://placehold.it/80x80" alt="">
+											</noscript>
+
+										</a>
+									</div><!--/.col-xs-2.col-sm-2-->
+
+								</div><!--/.row-->
+
+							</div><!--/.gallery-->
+
+							
+
+							
+						</div>
+
+					</article>
+
+					<div class="after-entry indented">
+						<hr>
+
+						<!--<aside class="widget" >
+                         
+							<h4 class="widget-title">{{singdetails.sub[5].subcategory_name}}</h4>
+
+							<div class="entries row">
+
+								<article class="entry type-post style-thumbnail col-xs-3 col-sm-3" *ngFor="let subsix of sub6">
+
+									<figure class="entry-thumbnail">
+										
+										<img src={{img_path}}{{subsix.blog_images}} width="230" height="230" alt="">
+
+										
+										<noscript>
+											<img src={{img_path}}{{subsix.blog_images}} alt="">
+										</noscript>
+									</figure>
+
+									<h3 class="entry-title"><a href="single.html">{{subsix.seo_title}}</a> </h3>
+
+										
+								</article>
+
+							</div>
+
+						</aside>-->
+
+						<hr>
+
+						<aside class="widget">
+							Share:
+							<a href="#" class="" onclick="window.open(
+								'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+								'facebook-share-dialog', 
+								'width=626,height=436'); 
+								return false;"><span class="icon-stack"><i class="icon-sign-blank icon-stack-base"></i><i class="icon-facebook icon-light"></i></span></a>
+								<!--<a href="#" class="" (click)="signIn('facebook')"
+								><span class="icon-stack"><i class="icon-sign-blank icon-stack-base"></i><i class="icon-facebook icon-light"></i></span></a>-->
+							<a href="#" class="" onclick="window.open(
+								'http://twitter.com/home?status='+encodeURIComponent(location.href), 
+								'facebook-share-dialog', 
+								'width=626,height=436'); 
+								return false;"><span class="icon-stack"><i class="icon-sign-blank icon-stack-base"></i><i class="icon-twitter icon-light"></i></span></a>
+							<a href="#" class="" onclick="window.open(
+								'https://plus.google.com/share?url='+encodeURIComponent(location.href), 
+								'facebook-share-dialog', 
+								'width=500,height=436'); 
+								return false;"><span class="icon-stack"><i class="icon-sign-blank icon-stack-base"></i><i class="icon-google-plus icon-light"></i></span></a>
+							<a href="#" class="" onclick="javascript:void((function(){var e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)})());"><span class="icon-stack"><i class="icon-sign-blank icon-stack-base"></i><i class="icon-pinterest icon-light"></i></span></a>
+						</aside> 
+
+					</div>
+				</div><!--/.col-md-8.col-lg-8.col-xl-9-->
+
+				<div class="sidebar col-md-4 col-lg-4 col-xl-3">
+
+					 <aside class="widget" *ngFor="let post of feature_post1">
+		
+								<h2 class="widget-title ribbon"><span>{{post.subcategory_name}}</span></h2>
+		
+								<div class="entries row" *ngFor="let blog of collection">
+		
+									<article class="type-post style-media-list media col-sm-6 col-md-12" *ngIf="post.subcategory_id == blog.blog_subcategories">
+		                                <a routerLink="/{{category}}/{{blog.seo_url}}">
+										<!-- to disable lazy loading, remove data-src and data-src-retina -->
+										<img src={{img_path}}{{blog.blog_images}} width="80" height="80" class="media-object pull-left" alt="">
+		
+										<!--fallback for no javascript browsers-->
+										<noscript>
+											<img src="http://placehold.it/80x80" alt="">
+										</noscript>
+		
+
+										<div class="media-body">
+											<h3  class="entry-title">
+												<a href="single.html" rel="bookmark">{{blog.blog_name}}</a>
+											</h3>
+											<div class="entry-meta">
+												<span class="entry-date"><a href="blog.html">on <time datetime="2013-07-04T23:26:34+00:00">September 20 2013</time></a></span>
+												<span class="category">In <a href="blog.html">Technology</a></span>
+											</div>
+										</div>
+		                               </a>
+									</article>
+									</div>
+								
+					</aside>
+
+
+				</div><!--/.sidebar col-md-4 col-lg-4 col-xl-3-->
+
+			</div><!--/#content-->
+			
+		</div><!--#main.container-->

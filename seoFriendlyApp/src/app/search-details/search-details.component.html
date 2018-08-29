@@ -1,0 +1,102 @@
+<div *ngIf="isLoading" class="overlay">
+    <diV id="loading-img"></diV>
+  </div>
+
+		<div *ngIf="!isLoading" id="main" class="container">
+
+			<div class="section row entries bg-primary section-no-margin-bottom">
+
+
+			</div>
+
+			<div id="content" class="content section row">
+
+				<div class="col-md-8 bg-base col-lg-8 col-xl-9">
+
+					<div class="ribbon ribbon-highlight">
+						<ol class="breadcrumb ribbon-inner">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Features</a></li>
+							<li class="active">Blog 2 Columns</li>
+						</ol>
+					</div>
+					
+					<div class="entries">
+                  
+						<article class="entry style-media media type-post" *ngFor="let subone1 of searchdetails | paginate: { itemsPerPage: 8, currentPage: p };let i=index">
+							<a routerLink="/{{category}}/{{subone1.seo_url}}">
+							<figure class="media-object pull-left entry-thumbnail hidden-xs">
+								<img src={{img_path}}{{subone1.blog_images}}  width="80" height="80" class="media-object pull-left" alt="">
+								<noscript>
+									<img src="http://placehold.it/230x230" alt="">
+								</noscript>
+							</figure>
+							<div class="media-body">
+								<header class="entry-header">
+									<h3 class="entry-title">
+										<a href="single.html" rel="bookmark">{{subone1.seo_title}}</a>
+									</h3>
+									<div class="entry-meta">
+										<span class="author">by <a href="blog.html">John Doe</a></span>
+										<span class="entry-date"><a href="blog.html">on <time datetime="2013-07-04T23:26:34+00:00">September 20 2013</time></a></span>
+										<span class="category">In <a href="blog.html">Entertaintment</a></span>
+									</div>
+								</header>
+                                <div >
+								<p>
+									{{descri[i]}}
+									<a routerLink="/{{category}}/{{subone1.seo_url}}">Continue Reading<i class="icon icon-long-arrow-right"></i></a>
+
+								</p>
+						    	</div>
+							</div>
+							</a>
+						</article>
+					</div><!--/.entris-->
+					<pagination-controls (pageChange)="p = $event" ></pagination-controls>
+					
+				</div><!--/.col-md-8.col-lg-8.col-xl-9-->
+
+
+			<div class="sidebar col-md-4 col-lg-4 col-xl-3">
+				
+				<aside class="widget" *ngFor="let post of feature_post1">
+
+					<h2 class="widget-title ribbon"><span>{{post.subcategory_name}}</span></h2>
+
+					<div class="entries row" *ngFor="let blog of collection">
+						<article class="type-post style-media-list media col-sm-6 col-md-12" *ngIf="post.subcategory_id == blog.blog_subcategories">
+
+							<a routerLink="/{{category}}/{{blog.seo_url}}">
+							<img src={{img_path}}{{blog.blog_images}} width="80" height="80" class="media-object pull-left" alt="">
+
+							
+							<noscript>
+								<img src="http://placehold.it/80x80" alt="">
+							</noscript>
+
+							<div class="media-body">
+								<h3  class="entry-title">
+									<a href="single.html" rel="bookmark">{{blog.blog_name}}</a>
+								</h3>
+								<div class="entry-meta">
+									<span class="entry-date"><a href="blog.html">on <time datetime="2013-07-04T23:26:34+00:00">September 20 2013</time></a></span>
+									<span class="category">In <a href="blog.html">Technology</a></span>
+								</div>
+							</div>
+                         </a>
+						</article>
+
+					</div>
+
+				</aside><!--/.widget-->
+
+				
+			</div><!--/.sidebar col-md-4 col-lg-4 col-xl-3-->
+
+
+			</div><!--/#content-->
+
+
+			
+		</div><!--#main.container-->
